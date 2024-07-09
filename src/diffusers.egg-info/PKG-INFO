@@ -1,0 +1,176 @@
+Metadata-Version: 2.1
+Name: diffusers
+Version: 0.20.0.dev0
+Summary: Diffusers
+Home-page: https://github.com/huggingface/diffusers
+Author: The HuggingFace team
+Author-email: patrick@huggingface.co
+License: Apache
+Keywords: deep learning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib_metadata
+Requires-Dist: filelock
+Requires-Dist: huggingface-hub>=0.13.2
+Requires-Dist: numpy
+Requires-Dist: regex!=2019.12.17
+Requires-Dist: requests
+Requires-Dist: safetensors>=0.3.1
+Requires-Dist: Pillow
+Provides-Extra: quality
+Requires-Dist: urllib3<=2.0.0; extra == "quality"
+Requires-Dist: black~=23.1; extra == "quality"
+Requires-Dist: isort>=5.5.4; extra == "quality"
+Requires-Dist: ruff>=0.0.241; extra == "quality"
+Requires-Dist: hf-doc-builder>=0.3.0; extra == "quality"
+Provides-Extra: docs
+Requires-Dist: hf-doc-builder>=0.3.0; extra == "docs"
+Provides-Extra: training
+Requires-Dist: accelerate>=0.11.0; extra == "training"
+Requires-Dist: datasets; extra == "training"
+Requires-Dist: protobuf<4,>=3.20.3; extra == "training"
+Requires-Dist: tensorboard; extra == "training"
+Requires-Dist: Jinja2; extra == "training"
+Provides-Extra: test
+Requires-Dist: compel==0.1.8; extra == "test"
+Requires-Dist: datasets; extra == "test"
+Requires-Dist: Jinja2; extra == "test"
+Requires-Dist: invisible-watermark>=0.2.0; extra == "test"
+Requires-Dist: k-diffusion>=0.0.12; extra == "test"
+Requires-Dist: librosa; extra == "test"
+Requires-Dist: omegaconf; extra == "test"
+Requires-Dist: parameterized; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-timeout; extra == "test"
+Requires-Dist: pytest-xdist; extra == "test"
+Requires-Dist: requests-mock==1.10.0; extra == "test"
+Requires-Dist: safetensors>=0.3.1; extra == "test"
+Requires-Dist: sentencepiece!=0.1.92,>=0.1.91; extra == "test"
+Requires-Dist: scipy; extra == "test"
+Requires-Dist: torchvision; extra == "test"
+Requires-Dist: transformers>=4.25.1; extra == "test"
+Provides-Extra: torch
+Requires-Dist: torch>=1.4; extra == "torch"
+Requires-Dist: accelerate>=0.11.0; extra == "torch"
+Provides-Extra: flax
+Requires-Dist: jax!=0.3.2,>=0.2.8; extra == "flax"
+Requires-Dist: jaxlib>=0.1.65; extra == "flax"
+Requires-Dist: flax>=0.4.1; extra == "flax"
+Provides-Extra: dev
+Requires-Dist: urllib3<=2.0.0; extra == "dev"
+Requires-Dist: black~=23.1; extra == "dev"
+Requires-Dist: isort>=5.5.4; extra == "dev"
+Requires-Dist: ruff>=0.0.241; extra == "dev"
+Requires-Dist: hf-doc-builder>=0.3.0; extra == "dev"
+Requires-Dist: compel==0.1.8; extra == "dev"
+Requires-Dist: datasets; extra == "dev"
+Requires-Dist: Jinja2; extra == "dev"
+Requires-Dist: invisible-watermark>=0.2.0; extra == "dev"
+Requires-Dist: k-diffusion>=0.0.12; extra == "dev"
+Requires-Dist: librosa; extra == "dev"
+Requires-Dist: omegaconf; extra == "dev"
+Requires-Dist: parameterized; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-timeout; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: requests-mock==1.10.0; extra == "dev"
+Requires-Dist: safetensors>=0.3.1; extra == "dev"
+Requires-Dist: sentencepiece!=0.1.92,>=0.1.91; extra == "dev"
+Requires-Dist: scipy; extra == "dev"
+Requires-Dist: torchvision; extra == "dev"
+Requires-Dist: transformers>=4.25.1; extra == "dev"
+Requires-Dist: accelerate>=0.11.0; extra == "dev"
+Requires-Dist: datasets; extra == "dev"
+Requires-Dist: protobuf<4,>=3.20.3; extra == "dev"
+Requires-Dist: tensorboard; extra == "dev"
+Requires-Dist: Jinja2; extra == "dev"
+Requires-Dist: hf-doc-builder>=0.3.0; extra == "dev"
+Requires-Dist: torch>=1.4; extra == "dev"
+Requires-Dist: accelerate>=0.11.0; extra == "dev"
+Requires-Dist: jax!=0.3.2,>=0.2.8; extra == "dev"
+Requires-Dist: jaxlib>=0.1.65; extra == "dev"
+Requires-Dist: flax>=0.4.1; extra == "dev"
+
+This is the trained model for the controlnet-stablediffusion for the scene text eraser. We have to customized the pipeline for the controlnet-stablediffusion-inpaint
+
+
+To training the model we had to use the SCUT-Ensnet dataset
+
+Installation
+
+```
+cd Diff_SceneTextEraser
+pip install -e ".[torch]"
+pip install -e .[all,dev,notebooks]
+```
+
+You can get the changes in the official repository
+
+Inference
+
+
+```
+python test_eraser.py
+```
+
+Check the Inference code and [Colab Notebook](https://colab.research.google.com/drive/14PQwrYmVBM1OIjYnWamcrTRcpHAZP9lX#scrollTo=fG8sB4c_j9il)
+
+```python
+from diffusers import (
+    UniPCMultistepScheduler, 
+    DDIMScheduler, 
+    EulerAncestralDiscreteScheduler,
+    StableDiffusionControlNetSceneTextErasingPipeline,
+    )
+import torch
+import numpy as np
+import cv2
+from PIL import Image, ImageDraw
+import math
+import os
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+model_path = "onkarsus13/controlnet_stablediffusion_scenetextEraser"
+
+pipe = StableDiffusionControlNetSceneTextErasingPipeline.from_pretrained(model_path)
+
+pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(pipe.scheduler.config)
+
+pipe.to(device)
+
+# pipe.enable_xformers_memory_efficient_attention()
+pipe.enable_model_cpu_offload()
+
+generator = torch.Generator(device).manual_seed(1)
+
+image = Image.open("<path to scene text image>").resize((512, 512))
+mask_image = Image.open('<path to the corrospoinding mask image>').resize((512, 512))
+
+image = pipe(
+    image,
+    mask_image,
+    [mask_image],
+    num_inference_steps=20,
+    generator=generator,
+    controlnet_conditioning_scale=1.0,
+    guidance_scale=1.0
+).images[0]
+
+image.save('test1.png')
+
+```
+
+You will find the models checkpoints [here](https://huggingface.co/onkarsus13/controlnet_stablediffusion_scenetextEraser/tree/main)

@@ -4,7 +4,7 @@ Welcome to the official implementation of [D2Styler](https://arxiv.org/pdf/2408.
 
 ## Overview
 
-The paper "D2Styler: Advancing Arbitrary Style Transfer with Discrete Diffusion Methods" introduces a novel framework for style transfer called D2Styler. Leveraging VQ-GANs and discrete diffusion, this method aims to improve the quality and stability of style transfer, addressing common issues like mode-collapse and over/under-stylization. By using Adaptive Instance Normalization (AdaIN) features, D2Styler facilitates effective style transfer between images. Experimental results show that D2Styler outperforms twelve existing methods on various metrics, producing high-quality, visually appealing images. The method uses images from the WikiArt and COCO datasets.
+"D2Styler: Advancing Arbitrary Style Transfer with Discrete Diffusion Methods" introduces a novel framework for style transfer called D2Styler. Leveraging VQ-GANs and discrete diffusion, this method aims to improve the quality and stability of style transfer, addressing common issues like mode-collapse and over/under-stylization. By using Adaptive Instance Normalization (AdaIN) features, D2Styler facilitates effective style transfer between images. Experimental results show that D2Styler outperforms twelve existing methods on various metrics, producing high-quality, visually appealing images. The method uses images from the WikiArt and COCO datasets.
 The model's architecture and its qualitative results are showcased below. The model will be available on HuggingFace 🤗, where you can download it for inference or fine-tuning.
 
 ## Model Architecture

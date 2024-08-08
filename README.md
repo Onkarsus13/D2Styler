@@ -6,6 +6,13 @@ International Conference on Pattern Recognition ICPR 24'
 
 The model will be released on HuggingFace 🤗 you can download and do inference or finetuning.
 
+Model Architecture:
+<img width="638" alt="image" src="https://github.com/user-attachments/assets/673efff9-dad5-4872-97af-eab1e72ece7a">
+
+Results:
+<img width="608" alt="image" src="https://github.com/user-attachments/assets/37add96c-1b76-4e83-bd90-5b52228f5fa8">
+
+
 Installation
 
 ```

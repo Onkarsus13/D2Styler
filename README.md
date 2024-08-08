@@ -38,8 +38,4 @@ To get started with D2Styler, follow the steps below to install the necessary de
 
 We welcome contributions to D2Styler! If you have any ideas for improvements or find any issues, please feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License.
-
 For more details, please refer to our [paper](https://arxiv.org/pdf/2408.03558v1) and our repository on [HuggingFace](https://huggingface.co/).

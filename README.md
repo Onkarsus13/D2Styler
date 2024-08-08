@@ -1,4 +1,4 @@
-This is an offical implimentation of D2Styler
+This is an offical implimentation of [D2Styler]{https://arxiv.org/pdf/2408.03558v1}
 
 Accepted at:
 
